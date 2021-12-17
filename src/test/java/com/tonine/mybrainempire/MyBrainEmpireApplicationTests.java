@@ -8,6 +8,8 @@ class MyBrainEmpireApplicationTests {
 
     @Test
     void contextLoads() {
+
     }
+
 
 }

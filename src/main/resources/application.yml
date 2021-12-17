@@ -7,3 +7,12 @@ spring:
         url: jdbc:mysql://localhost:3306/brainempire?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
         username: root
         password: 123
+    output:
+        ansi:
+            enabled: ALWAYS
+mybatis:
+    mapper-locations: com/tonine/mybrainempire/dao/mysql/*.xml
+
+logging:
+    level:
+        com.tonine.mybrainempire: debug

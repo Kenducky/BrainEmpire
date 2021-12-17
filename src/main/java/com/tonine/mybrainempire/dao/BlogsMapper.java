@@ -1,22 +1,18 @@
 package com.tonine.mybrainempire.dao;
 
 import com.tonine.mybrainempire.entity.Blogs;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
-  * @author XiongYiGe
-  * @date 2021/8/12
-  * @description 
-  */
+ * @author XiongYiGe
+ * @date 2021/8/12
+ * @description
+ */
+@Mapper
 public interface BlogsMapper {
-    int deleteByPrimaryKey(Long id);
 
-    int insert(Blogs record);
-
-    int insertSelective(Blogs record);
-
-    Blogs selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(Blogs record);
-
-    int updateByPrimaryKey(Blogs record);
+    List<Blogs> pageSelect(@Param("offset") int offset, @Param("pageSize") int pageSize);
 }
