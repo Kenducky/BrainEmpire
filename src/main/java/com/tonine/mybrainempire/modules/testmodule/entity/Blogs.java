@@ -1,7 +1,10 @@
-package com.tonine.mybrainempire.entity;
+package com.tonine.mybrainempire.modules.testmodule.entity;
+
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 
 import java.util.Date;
-import lombok.Data;
 
 /**
   * @author XiongYiGe
@@ -22,6 +25,8 @@ public class Blogs {
 
     private String userId;
 
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date gmtCreated;
 
     private Date gmtModified;

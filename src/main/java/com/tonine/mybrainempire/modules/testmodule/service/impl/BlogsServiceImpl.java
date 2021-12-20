@@ -1,8 +1,8 @@
-package com.tonine.mybrainempire.service.impl;
+package com.tonine.mybrainempire.modules.testmodule.service.impl;
 
-import com.tonine.mybrainempire.dao.BlogsMapper;
-import com.tonine.mybrainempire.entity.Blogs;
-import com.tonine.mybrainempire.service.BlogsService;
+import com.tonine.mybrainempire.modules.testmodule.dao.BlogsMapper;
+import com.tonine.mybrainempire.modules.testmodule.entity.Blogs;
+import com.tonine.mybrainempire.modules.testmodule.service.BlogsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

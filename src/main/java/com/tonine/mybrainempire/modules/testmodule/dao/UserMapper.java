@@ -1,4 +1,4 @@
-package com.tonine.mybrainempire.dao;
+package com.tonine.mybrainempire.modules.testmodule.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 

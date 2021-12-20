@@ -1,8 +1,9 @@
-package com.tonine.mybrainempire.controller;
+package com.tonine.mybrainempire.modules.testmodule.controller;
 
-import com.tonine.mybrainempire.common.Result;
-import com.tonine.mybrainempire.entity.Blogs;
-import com.tonine.mybrainempire.service.BlogsService;
+import com.tonine.mybrainempire.common.entity.Result;
+import com.tonine.mybrainempire.modules.testmodule.dao.BlogsMapper;
+import com.tonine.mybrainempire.modules.testmodule.entity.Blogs;
+import com.tonine.mybrainempire.modules.testmodule.service.BlogsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,10 +23,12 @@ import java.util.List;
 public class HelloController {
     @Autowired
     BlogsService blogsService;
+    @Autowired
+    BlogsMapper blogsMapper;
 
     @GetMapping("hello")
     public Result<List<Blogs>> hello() {
-        List<Blogs> blogs = blogsService.pageSelect(0, 10);
+        List<Blogs> blogs = blogsMapper.selectAllByTitleLike("te");
         if (blogs != null) {
             log.info("blogSize:{}", blogs.size());
         }

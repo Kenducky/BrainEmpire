@@ -1,4 +1,4 @@
-package com.tonine.mybrainempire.entity;
+package com.tonine.mybrainempire.modules.testmodule.entity;
 
 import java.util.Date;
 import lombok.Data;

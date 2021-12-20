@@ -1,4 +1,4 @@
-package com.tonine.mybrainempire.service;
+package com.tonine.mybrainempire.modules.testmodule.service;
 
 /**
   * @author XiongYiGe

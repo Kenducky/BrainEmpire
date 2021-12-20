@@ -11,7 +11,7 @@ spring:
         ansi:
             enabled: ALWAYS
 mybatis:
-    mapper-locations: com/tonine/mybrainempire/dao/mysql/*.xml
+    mapper-locations: com/tonine/mybrainempire/modules/*/dao/mysql/*.xml
 
 logging:
     level:

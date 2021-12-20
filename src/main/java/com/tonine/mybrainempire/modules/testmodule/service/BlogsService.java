@@ -1,6 +1,6 @@
-package com.tonine.mybrainempire.service;
+package com.tonine.mybrainempire.modules.testmodule.service;
 
-import com.tonine.mybrainempire.entity.Blogs;
+import com.tonine.mybrainempire.modules.testmodule.entity.Blogs;
 
 import java.util.List;
 

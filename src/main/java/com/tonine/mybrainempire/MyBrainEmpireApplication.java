@@ -10,6 +10,8 @@ public class MyBrainEmpireApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MyBrainEmpireApplication.class, args);
+        //String[] beanDefinitionNames = run.getBeanDefinitionNames();
+        //System.out.println("beanDefinitionNames = " + Arrays.toString(beanDefinitionNames));
         log.info("-------------------now i run!===============");
     }
 

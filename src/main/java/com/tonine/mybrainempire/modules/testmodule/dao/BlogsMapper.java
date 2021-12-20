@@ -1,6 +1,6 @@
-package com.tonine.mybrainempire.dao;
+package com.tonine.mybrainempire.modules.testmodule.dao;
 
-import com.tonine.mybrainempire.entity.Blogs;
+import com.tonine.mybrainempire.modules.testmodule.entity.Blogs;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,4 +15,8 @@ import java.util.List;
 public interface BlogsMapper {
 
     List<Blogs> pageSelect(@Param("offset") int offset, @Param("pageSize") int pageSize);
+
+    List<Blogs> selectAllByTitleLike(@Param("likeTitle")String likeTitle);
+
+
 }
