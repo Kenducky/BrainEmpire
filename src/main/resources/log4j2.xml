@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<configuration status="warn" monitorInterval="5">
-    <properties>
-        <property name="LOG_HOME">D:/logs</property>
-    </properties>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://logging.apache.org/log4j/2.0/config Log4j-config.xsd"
+               status="warn" monitorInterval="5"
+               >
+    <Properties>
+        <Property name="LOG_HOME">logs</Property>
+    </Properties>
 
     <Appenders>
+
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] [%-5level] %c{36}:%L --- %m%n" />
         </Console>
@@ -36,4 +41,4 @@
             <AppenderRef ref="Console" />
         </Root>
     </Loggers>
-</configuration>
+</Configuration>
