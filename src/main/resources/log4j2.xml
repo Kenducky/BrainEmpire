@@ -4,6 +4,9 @@
                xsi:schemaLocation="http://logging.apache.org/log4j/2.0/config Log4j-config.xsd"
                status="warn" monitorInterval="5"
                >
+    <Properties>
+        <Property name="LOG_HOME">data</Property>
+    </Properties>
     <Appenders>
 
         <Console name="Console" target="SYSTEM_OUT">
@@ -12,14 +15,14 @@
         </Console>
 
         <RollingFile name="rollingFile"
-                     filePattern="logs/a_$${date:yyyy-MM-dd}_YXPT_10001_pageExposure_00_%i.log">
+                     filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10001_pageExposure_00_%i.log">
             <PatternLayout>
                 <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
             </PatternLayout>
+            <MarkerFilter marker="pageExposure" onMatch="ACCEPT" onMismatch="DENY"/>
             <Policies>
-                <SizeBasedTriggeringPolicy size="10 MB" />
+                <SizeBasedTriggeringPolicy size="300KB" />
             </Policies>
-
         </RollingFile>
     </Appenders>
 
