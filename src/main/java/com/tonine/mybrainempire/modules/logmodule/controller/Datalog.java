@@ -25,8 +25,8 @@ public class Datalog {
         Marker pageExposure1 = MarkerManager.getMarker("pageExposure");
         String dataString;
         for (int i = 0; i < 10000; i++) {
-            dataString= RandomStringUtils.randomAlphanumeric(100)+type+"你好";
-            log.info(pageExposure1,dataString);
+            dataString = RandomStringUtils.randomAlphanumeric(100) + "你好";
+            log.info(pageExposure1, dataString);
         }
         Result<String> objectResult = new Result<>();
         objectResult.success("success");

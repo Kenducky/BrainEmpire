@@ -14,12 +14,67 @@
             <PatternLayout pattern="%style{%d{yyyy-MM-dd HH:mm:ss.SSS}}{white} %style{%-5level}{magenta} %style{[%t]}{bright,yellow} %style{%c}{bright,cyan}:%style{%M(%L)}{green}: %msg%n" disableAnsi="false" />
         </Console>
 
-        <RollingFile name="rollingFile"
+        <RollingFile name="pageExposure"
                      filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10001_pageExposure_00_%i.log">
             <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+                <Pattern>%m%n</Pattern>
             </PatternLayout>
             <MarkerFilter marker="pageExposure" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="300KB" />
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="contentExposure"
+                     filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10002_contentExposure_00_%i.log">
+            <PatternLayout>
+                <Pattern>%m%n</Pattern>
+            </PatternLayout>
+            <MarkerFilter marker="contentExposure" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="300KB" />
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="access"
+                     filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10003_access_00_%i.log">
+            <PatternLayout>
+                <Pattern>%m%n</Pattern>
+            </PatternLayout>
+            <MarkerFilter marker="access" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="300KB" />
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="pageClick"
+                     filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10004_pageClick_00_%i.log">
+            <PatternLayout>
+                <Pattern>%m%n</Pattern>
+            </PatternLayout>
+            <MarkerFilter marker="pageClick" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="300KB" />
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="functionClick"
+                     filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10005_functionClick_00_%i.log">
+            <PatternLayout>
+                <Pattern>%m%n</Pattern>
+            </PatternLayout>
+            <MarkerFilter marker="functionClick" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="300KB" />
+            </Policies>
+        </RollingFile>
+
+        <RollingFile name="order"
+                     filePattern="${LOG_HOME}/%d{yyyyMMdd}/a_$${date:yyyy-MM-dd}_YXPT_10006_order_00_%i.log">
+            <PatternLayout>
+                <Pattern>%m%n</Pattern>
+            </PatternLayout>
+            <MarkerFilter marker="order" onMatch="ACCEPT" onMismatch="DENY"/>
             <Policies>
                 <SizeBasedTriggeringPolicy size="300KB" />
             </Policies>
@@ -29,7 +84,12 @@
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console" />
-            <AppenderRef ref="rollingFile"/>
+            <AppenderRef ref="pageExposure"/>
+            <AppenderRef ref="contentExposure"/>
+            <AppenderRef ref="access"/>
+            <AppenderRef ref="pageClick"/>
+            <AppenderRef ref="functionClick"/>
+            <AppenderRef ref="order"/>
         </Root>
     </Loggers>
 </Configuration>
