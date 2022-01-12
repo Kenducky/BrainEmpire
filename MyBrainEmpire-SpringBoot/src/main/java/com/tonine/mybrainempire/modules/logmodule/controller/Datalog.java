@@ -27,6 +27,8 @@ public class Datalog {
         for (int i = 0; i < 10000; i++) {
             dataString = RandomStringUtils.randomAlphanumeric(100) + "你好";
             log.info(pageExposure1, dataString);
+            log.info(pageExposure1,dataString);
+
         }
         // TODO: 2022/1/5 提交测试 
         Result<String> objectResult = new Result<>();
