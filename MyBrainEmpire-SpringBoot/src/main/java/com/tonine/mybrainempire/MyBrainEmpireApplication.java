@@ -13,7 +13,7 @@ public class MyBrainEmpireApplication {
         //String[] beanDefinitionNames = run.getBeanDefinitionNames();
         //System.out.println("beanDefinitionNames = " + Arrays.toString(beanDefinitionNames));
         log.info("-------------------now i run!===============");
-        log.info("-------------------run by power!！！===============");
+        log.info("-------------------run by power!！！！===============");
     }
 
 
